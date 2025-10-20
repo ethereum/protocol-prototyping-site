@@ -58,7 +58,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 20px;
 }
 
 /* Header */
@@ -180,12 +180,11 @@ body:not([data-theme]) .sun-icon {
 
 /* Hero Section */
 .hero {
-    min-height: calc(100vh - 73px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 2rem 0;
+    padding: 4rem 0;
     border-bottom: 1px solid var(--border-color);
     position: relative;
 }
@@ -197,8 +196,7 @@ body:not([data-theme]) .sun-icon {
 
 @media (max-width: 768px) {
     .hero {
-        min-height: calc(100vh - 65px);
-        padding: 2rem 0;
+        padding: 3rem 0;
     }
 
     .hero-content {
@@ -213,70 +211,9 @@ body:not([data-theme]) .sun-icon {
     font-weight: 400;
     margin-bottom: 0;
     letter-spacing: -0.3px;
-    animation: fadeInUp 0.8s ease-out;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Scroll Indicator */
-.scroll-indicator {
-    position: absolute;
-    bottom: 3rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-    color: var(--text-secondary);
-    transition: all 0.3s ease, opacity 0.5s ease;
-    animation: bounce 2s infinite;
-}
-
-.scroll-indicator span {
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-.scroll-arrow {
-    width: 24px;
-    height: 24px;
-}
-
-.scroll-indicator:hover {
-    color: var(--accent-color);
-    transform: translateX(-50%) translateY(3px);
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateX(-50%) translateY(0);
-    }
-    40% {
-        transform: translateX(-50%) translateY(-10px);
-    }
-    60% {
-        transform: translateX(-50%) translateY(-5px);
-    }
-}
-
-@media (max-width: 768px) {
-    .scroll-indicator {
-        bottom: 2rem;
-    }
-}
+/* Scroll indicator removed for simplicity */
 
 .highlight-text {
     font-size: 1.75rem;
@@ -288,29 +225,8 @@ body:not([data-theme]) .sun-icon {
     letter-spacing: -0.5px;
     position: relative;
     display: inline-block;
-    animation: gradientShift 8s ease infinite;
 }
 
-@keyframes gradientShift {
-    0%, 100% { 
-        background: linear-gradient(135deg, #627eea 0%, #8B5CF6 50%, #EC4899 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-    33% { 
-        background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #627eea 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-    66% { 
-        background: linear-gradient(135deg, #EC4899 0%, #627eea 50%, #8B5CF6 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-}
 
 [data-theme="dark"] .highlight-text {
     filter: brightness(1.2);
@@ -318,8 +234,7 @@ body:not([data-theme]) .sun-icon {
 
 /* Sections */
 .section {
-    padding: 5rem 0;
-    min-height: 100vh;
+    padding: 3rem 0;
     display: flex;
     flex-direction: column;
 }
@@ -330,8 +245,7 @@ body:not([data-theme]) .sun-icon {
 
 @media (max-width: 768px) {
     .section {
-        padding: 3rem 0;
-        min-height: auto;
+        padding: 2rem 0;
     }
     
     .section#projects {
@@ -346,7 +260,7 @@ body:not([data-theme]) .sun-icon {
 .section-title {
     font-size: 1.75rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     letter-spacing: -0.5px;
     font-family: 'JetBrains Mono', monospace;
 }
@@ -355,7 +269,7 @@ body:not([data-theme]) .sun-icon {
 .filters {
     display: flex;
     gap: 0.75rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     flex-wrap: wrap;
 }
 
@@ -394,13 +308,13 @@ body:not([data-theme]) .sun-icon {
     background-color: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    padding: 1.75rem;
+    padding: 1.5rem;
     transition: all 0.2s ease;
     text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
-    min-height: 200px;
+    min-height: 180px;
 }
 
 .work-item:hover {
@@ -521,8 +435,8 @@ body:not([data-theme]) .sun-icon {
 .team-members-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 3rem;
-    margin: 3rem 0;
+    gap: 2rem;
+    margin: 2rem 0;
 }
 
 .team-member {
@@ -568,8 +482,8 @@ body:not([data-theme]) .sun-icon {
 
 /* Team Description */
 .team-description {
-    margin-top: 3rem;
-    padding: 2rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
     background-color: var(--bg-secondary);
     border-radius: 12px;
     text-align: center;
@@ -603,7 +517,7 @@ footer {
     background-color: var(--bg-secondary);
     border-top: 1px solid var(--border-color);
     padding: 2rem 0;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .footer-content {
@@ -621,12 +535,16 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+    
     .header-content {
         padding: 1rem 0;
     }
     
     header h1 {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
     }
     
     .main-nav {
@@ -638,7 +556,7 @@ footer {
         background-color: var(--bg-primary);
         border-bottom: 1px solid var(--border-color);
         flex-direction: column;
-        padding: 1rem 24px;
+        padding: 1rem 16px;
         gap: 0;
     }
     
@@ -655,26 +573,47 @@ footer {
     }
     
     .hero-description {
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.6;
     }
     
     .highlight-text {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         display: inline;
     }
     
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
     }
     
     .team-work {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .work-item {
+        padding: 1.25rem;
+        min-height: auto;
     }
     
     .team-members-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .team-description {
+        padding: 1.25rem;
+    }
+    
+    .filters {
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .filter-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.85rem;
     }
     
     .footer-content {

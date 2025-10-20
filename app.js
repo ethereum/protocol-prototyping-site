@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Ensure page starts at top
-    window.scrollTo(0, 0);
     
     // Theme management
     const themeToggle = document.getElementById('theme-toggle');
@@ -9,28 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load saved theme or default to light
     const savedTheme = localStorage.getItem('theme') || 'light';
     body.setAttribute('data-theme', savedTheme);
-    
-    // Scroll indicator functionality
-    const scrollIndicator = document.querySelector('.scroll-indicator');
-    const projectsSection = document.getElementById('projects');
-    
-    if (scrollIndicator && projectsSection) {
-        scrollIndicator.addEventListener('click', () => {
-            projectsSection.scrollIntoView({ behavior: 'smooth' });
-        });
-        
-        // Hide scroll indicator when user scrolls
-        let scrollTimeout;
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                scrollIndicator.style.opacity = '0';
-                scrollIndicator.style.pointerEvents = 'none';
-            } else {
-                scrollIndicator.style.opacity = '1';
-                scrollIndicator.style.pointerEvents = 'auto';
-            }
-        });
-    }
     
     themeToggle?.addEventListener('click', () => {
         const currentTheme = body.getAttribute('data-theme') || 'light';
@@ -72,8 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     window.addEventListener('scroll', updateActiveNav);
-    // Delay initial nav update to prevent any scrolling on load
-    setTimeout(updateActiveNav, 100);
+    updateActiveNav();
     
     // Smooth scroll for navigation links
     navLinks.forEach(link => {
@@ -174,26 +149,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Intersection Observer for fade-in animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-    
-    // Observe sections for animation
-    document.querySelectorAll('.section').forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(section);
-    });
 });
