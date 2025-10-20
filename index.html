@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocol Prototyping - Ethereum Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Protocol Prototyping</h1>
+                <nav class="main-nav">
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#team" class="nav-link">Team</a>
+                </nav>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero" id="hero">
+                <div class="hero-content">
+                    <p class="hero-description">
+                        The <span class="highlight-text">Protocol Prototyping</span> team at the Ethereum Foundation builds end-to-end implementations of new ideas for Ethereum's core protocol. By turning concepts into working prototypes, we explore how potential upgrades behave in practice, helping the community move beyond theory and speculation.
+                    </p>
+                </div>
+                <div class="scroll-indicator">
+                    <span>Scroll to explore</span>
+                    <svg class="scroll-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="7 13 12 18 17 13"></polyline>
+                        <polyline points="7 6 12 11 17 6"></polyline>
+                    </svg>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="section" id="projects">
+                <h2 class="section-title">Projects</h2>
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="CL">Consensus Layer</button>
+                    <button class="filter-btn" data-filter="EL">Execution Layer</button>
+                    <button class="filter-btn" data-filter="MEV-Boost">MEV-Boost</button>
+                    <button class="filter-btn" data-filter="DL">Data Layer</button>
+                </div>
+                <div class="team-work" id="team-work">
+                    
+        <a href="https://github.com/ethereum/execution-spec-tests/releases/tag/bal%40v1.0.0" target="_blank" rel="noopener noreferrer" class="work-item " data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">🧪 Testing Block Level Access Lists</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Complex test cases for BAL and existing EIP interactions.</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/raxhvl.png?size=40" alt="raxhvl" class="author-avatar">
+                    <span>raxhvl</span>
+                </div>
+                <span class="work-date">Sep/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/payload-chunking/23008" target="_blank" rel="noopener noreferrer" class="work-item " data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">Payload Chunking</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Proposal for splitting blocks into independent chuns</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Sep/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://notes.ethereum.org/@miloss/Prototyping_EIP-7782" target="_blank" rel="noopener noreferrer" class="work-item " data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">EIP-7782 Prototyping</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Building a devnet prototype for 6-second slot research</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/morph-dev.png?size=40" alt="Milos Stankovic" class="author-avatar">
+                    <span>Milos Stankovic</span>
+                </div>
+                <span class="work-date">Sep/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://github.com/jihoonsong/prysm/tree/eip7782" target="_blank" rel="noopener noreferrer" class="work-item " data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">EIP-7782 Prysm Prototype</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Prysm prototype for EIP-7782</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/jihoonsong.png?size=40" alt="Jihoon Song" class="author-avatar">
+                    <span>Jihoon Song</span>
+                </div>
+                <span class="work-date">Aug/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://www.youtube.com/watch?v=GiQyu1xSipA" target="_blank" rel="noopener noreferrer" class="work-item " data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">ePBS and FOCIL - EthStaker Community Call</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">A discussion on what ePBS and FOCIL are and how they impact stakers</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/jihoonsong.png?size=40" alt="Jihoon Song" class="author-avatar">
+                    <span>Jihoon Song</span>
+                </div>
+                <span class="work-date">Aug/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://hackmd.io/@jihoonsong/rJX-fxADxl" target="_blank" rel="noopener noreferrer" class="work-item " data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">How to Implement EIP-7805 in the CL</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">A comprehensive guide for implementing EIP-7805 in the CL</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/jihoonsong.png?size=40" alt="Jihoon Song" class="author-avatar">
+                    <span>Jihoon Song</span>
+                </div>
+                <span class="work-date">Aug/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/overclocking-blocks-with-gas-refunds/22862" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">Overclocking Blocks with Gas Refunds</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Analysis of gas refunds, EIP-7778 and worst-case state changes</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Aug/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://hackmd.io/@jihoonsong/BJpcaudvex" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">How to Implement EIP-7805 in the EL</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">A comprehensive guide for implementing EIP-7805 in the EL</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/jihoonsong.png?size=40" alt="Jihoon Song" class="author-avatar">
+                    <span>Jihoon Song</span>
+                </div>
+                <span class="work-date">Jul/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://github.com/ethereum/execution-specs/pull/1349" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">EIP-7805 Execution Specification</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">The Execution specification for EIP-7805</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/jihoonsong.png?size=40" alt="Jihoon Song" class="author-avatar">
+                    <span>Jihoon Song</span>
+                </div>
+                <span class="work-date">Jul/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://github.com/ethereum/consensus-specs/tree/b9dfb4575c51bb94ad0077e7b209db5720c8bb78/specs/_features/eip7805" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">EIP-7805 Consensus Specification</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">The Consensus specification for EIP-7805</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/jihoonsong.png?size=40" alt="Jihoon Song" class="author-avatar">
+                    <span>Jihoon Song</span>
+                </div>
+                <span class="work-date">Jul/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/capping-transaction-gas-data-impact-and-rationale/22738" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">Capping Transaction Gas: Data, Impact, and Rationale</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Analysis of capping the transaction gas limit at 2**24 gas</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Jul/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://raxhvl.com/ethereum/diet-bal/" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">Diet BAL</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">A little Block Access Lists (BAL) experiment.</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/raxhvl.png?size=40" alt="raxhvl" class="author-avatar">
+                    <span>raxhvl</span>
+                </div>
+                <span class="work-date">Jul/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://pokebal.raxhvl.com" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">PokéBAL</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">A collection of helpful resources for Block Access Lists (BAL) implementors.</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/raxhvl.png?size=40" alt="raxhvl" class="author-avatar">
+                    <span>raxhvl</span>
+                </div>
+                <span class="work-date">Jul/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/slot-restructuring-design-considerations-and-trade-offs/22687" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">Slot Restructuring: Design Considerations and Trade-Offs</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Analysis of slot restructuring design considerations and trade-offs for Ethereum</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Jun/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/using-portal-network-protocol-for-history-expiry/22658" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">Portal Network &amp; History Expiry</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Proposal for a spec for new History subnetwork over Portal protocol for the purpose of History Expiry</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/morph-dev.png?size=40" alt="Milos Stankovic" class="author-avatar">
+                    <span>Milos Stankovic</span>
+                </div>
+                <span class="work-date">Jun/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/block-level-access-lists-bals/22331" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">Block-level Access Lists (BALs)</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Proposal for block-level access lists to improve Ethereum execution efficiency</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">May/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/delayed-execution-and-free-da/22265" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">Delayed Execution and Free DA</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Research on delayed execution mechanisms and free data availability</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">May/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/execution-dependencies/22150" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">Execution Dependencies</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Analysis of execution dependencies in Ethereum block processing</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Apr/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://github.com/jihoonsong/local-devnet-focil" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">EIP-7805 Kurtosis Configurations</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Kurtosis configurations for EIP-7805 local devnets</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/jihoonsong.png?size=40" alt="Jihoon Song" class="author-avatar">
+                    <span>Jihoon Song</span>
+                </div>
+                <span class="work-date">Apr/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/expanding-mempool-perspectives/22022" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL">
+            <div class="work-header">
+                <h3 class="work-title">Expanding Mempool Perspectives</h3>
+                <span class="work-label label-DL">DL</span>
+            </div>
+            <p class="work-description">Research on expanding perspectives and analysis of Ethereum mempool dynamics</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Mar/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://github.com/ethereum/go-ethereum/pull/30914" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">EIP-7805 Geth Prototype</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Geth prototype for EIP-7805</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/jihoonsong.png?size=40" alt="Jihoon Song" class="author-avatar">
+                    <span>Jihoon Song</span>
+                </div>
+                <span class="work-date">Feb/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/max-blobs-flag-economic-perspective/21798" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL">
+            <div class="work-header">
+                <h3 class="work-title">Max-Blobs Flag: Economic Perspective</h3>
+                <span class="work-label label-DL">DL</span>
+            </div>
+            <p class="work-description">Economic analysis of the max-blobs flag and its implications</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Feb/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/delayed-execution-and-skipped-transactions/21677" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">Delayed Execution And Skipped Transactions</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Research on delayed execution and handling of skipped transactions</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Feb/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/block-level-warming/21452" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">Block-Level Warming</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Proposal for block-level warming to improve execution efficiency</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Jan/2025</span>
+            </div>
+        </a>
+    
+        <a href="https://github.com/ethereum/execution-apis/pull/609" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">EIP-7805 Execution APIs Specification</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">The Execution APIs specification for EIP-7805</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/jihoonsong.png?size=40" alt="Jihoon Song" class="author-avatar">
+                    <span>Jihoon Song</span>
+                </div>
+                <span class="work-date">Dec/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/on-increasing-the-block-gas-limit-technical-considerations-path-forward/21225" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">On Increasing the Block Gas Limit: Technical Considerations &amp; Path Forward</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Technical considerations and path forward for increasing Ethereum block gas limit</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Dec/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/on-blob-markets-base-fee-adjustments-and-optimizations/21024" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL">
+            <div class="work-header">
+                <h3 class="work-title">On Blob Markets, Base Fee Adjustments and Optimizations</h3>
+                <span class="work-label label-DL">DL</span>
+            </div>
+            <p class="work-description">Analysis of blob markets, base fee adjustments and optimization strategies</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Nov/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://eips.ethereum.org/EIPS/eip-7805" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">EIP-7805: Fork-choice enforced Inclusion Lists (FOCIL)</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">A robust mechanism to preserve Ethereum&#039;s censorship resistance properties by guaranteeing timely transaction inclusion</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/jihoonsong.png?size=40" alt="Jihoon Song" class="author-avatar">
+                    <span>Jihoon Song</span>
+                </div>
+                <span class="work-date">Nov/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/on-solo-staking-local-block-building-and-blobs/20540" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">On solo staking, local block building and blobs</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Research on solo staking implications with local block building and blob handling</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Oct/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/steelmanning-a-blob-throughput-increase-for-pectra/20499" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL">
+            <div class="work-header">
+                <h3 class="work-title">Steelmanning a blob throughput increase for Pectra</h3>
+                <span class="work-label label-DL">DL</span>
+            </div>
+            <p class="work-description">Arguments for increasing blob throughput in the Pectra upgrade</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Sep/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/on-proposer-timing-games-and-economies-of-scale/20309" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">On Proposer Timing Games and Economies of Scale</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Analysis of proposer timing games and their economies of scale implications</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Aug/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/on-attestations-block-propagation-and-timing-games/20272" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">On Attestations, Block Propagation, and Timing Games</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Research on attestations, block propagation dynamics and timing game strategies</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Aug/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/diseconomies-of-scale-anti-correlation-penalties-eip-7716/20114" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">Diseconomies of Scale: Anti-Correlation Penalties (EIP-7716)</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">EIP-7716 proposal for anti-correlation penalties to address economies of scale</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Jul/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/deep-diving-attestations-a-quantitative-analysis/20020" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">Deep Diving Attestations - A Quantitative Analysis</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Quantitative analysis of Ethereum attestation patterns and behaviors</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Jun/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/blobs-reorgs-and-the-role-of-mev-boost/19783" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL">
+            <div class="work-header">
+                <h3 class="work-title">Blobs, Reorgs, and the Role of MEV-Boost</h3>
+                <span class="work-label label-DL">DL</span>
+            </div>
+            <p class="work-description">Analysis of blob interactions with reorgs and MEV-Boost&#039;s role</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Jun/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/is-it-worth-using-mev-boost/19753" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">Is it worth using MEV-Boost?</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Quantitative analysis on the benefits and drawbacks of using MEV-Boost</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Jun/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/big-blocks-blobs-and-reorgs/19674" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL">
+            <div class="work-header">
+                <h3 class="work-title">Big blocks, blobs, and reorgs</h3>
+                <span class="work-label label-DL">DL</span>
+            </div>
+            <p class="work-description">Research on the relationship between block size, blobs and reorganization risks</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">May/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/slashing-proofoor-on-chain-slashed-validator-proofs/19421" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">Slashing Proofoor - On-chain slashed validator proofs</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Implementation of on-chain proofs for slashed validators</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Apr/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/portal-network-verkle/19339" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">Portal Network &amp; Verkle</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Research on how Verkle state trie can be distributed over Portal Network</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/morph-dev.png?size=40" alt="Milos Stankovic" class="author-avatar">
+                    <span>Milos Stankovic</span>
+                </div>
+                <span class="work-date">Apr/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/analysis-on-correlated-attestation-penalties/19244" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">Analysis on Correlated Attestation Penalties</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Analysis of correlated attestation penalties and their impact on validators</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Apr/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/eip-7623-post-4844-analysis/19199" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">EIP-7623 - Post-4844 Analysis</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Post-4844 analysis of EIP-7623 calldata cost increase proposal</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Apr/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/analyzing-eip-7623-increase-calldata-cost/19002" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">Analyzing EIP-7623: Increase Calldata Cost</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Detailed analysis of EIP-7623 proposal to increase calldata costs</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Mar/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/on-increasing-the-block-gas-limit/18567" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">On Increasing the Block Gas Limit</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Research on implications and considerations for increasing block gas limit</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Feb/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/on-block-sizes-gas-limits-and-scalability/184443" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">On Block Sizes, Gas Limits and Scalability</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Analysis of block sizes, gas limits and their impact on scalability</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Jan/2024</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/distributing-ethereum-state-over-portal-network/17882" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">Distributing Ethereum State over Portal Network</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Research on how to distribute state trie over Portal Network for quicker retrieval of leaf nodes</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/morph-dev.png?size=40" alt="Milos Stankovic" class="author-avatar">
+                    <span>Milos Stankovic</span>
+                </div>
+                <span class="work-date">Dec/2023</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/in-a-post-mev-burn-world-some-simulations-and-stats/17092" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">In a post MEV-Burn world - Some simulations and stats</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Simulations and statistics for a post MEV-Burn implementation world</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Oct/2023</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/cumulative-non-expiring-inclusion-lists/16520" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">Cumulative, Non-Expiring Inclusion Lists</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Proposal for cumulative, non-expiring inclusion lists mechanism</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Aug/2023</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/the-second-slot-itch-statistical-analysis-of-reorgs/16333" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">The Second-Slot Itch - Statistical Analysis of Reorgs</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Statistical analysis of reorganizations focusing on second-slot patterns</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Aug/2023</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/selfish-mixing-and-randao-manipulation/16081" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">Selfish Mixing and RANDAO Manipulation</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Analysis of selfish mixing strategies and RANDAO manipulation techniques</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Jul/2023</span>
+            </div>
+        </a>
+    
+        <a href="https://hackmd.io/@Nerolation/rkp8LyRUh" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">Gas Ticketing - A Backstage Pass to Ethereum Blocks</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Proposal for gas ticketing mechanism to improve block space allocation</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Jun/2023</span>
+            </div>
+        </a>
+    
+        <a href="./builder-censorship.html" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">Builders on MEV - Analysing the impact of the OFAC sanctions</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Analysis of OFAC sanctions impact on block builders and MEV</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Jan/2023</span>
+            </div>
+        </a>
+    
+        <a href="https://medium.com/@toni_w/practical-guide-into-analyzing-mev-in-the-proof-of-stake-era-e2b024509918" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+            <div class="work-header">
+                <h3 class="work-title">Practical Guide into Analyzing MEV in the Proof-of-Stake Era</h3>
+                <span class="work-label label-CL">CL</span>
+            </div>
+            <p class="work-description">Comprehensive guide for analyzing MEV in Ethereum&#039;s proof-of-stake system</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Oct/2022</span>
+            </div>
+        </a>
+    
+        <a href="./eip5564.html" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">ERC-5564: Improving Privacy on Ethereum through Stealth Address Wallets</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">ERC-5564 proposal for implementing stealth address wallets on Ethereum</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Sep/2022</span>
+            </div>
+        </a>
+    
+        <a href="https://medium.com/@toni_w/ethereum-datafarm-parsing-historic-event-data-from-the-ethereum-blockchain-into-csv-files-using-9c7ec79dfe7c" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL">
+            <div class="work-header">
+                <h3 class="work-title">Ethereum Datafarm: Parsing Historic Event Data</h3>
+                <span class="work-label label-DL">DL</span>
+            </div>
+            <p class="work-description">Guide for parsing historic event data from Ethereum blockchain using Etherscan API</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Aug/2022</span>
+            </div>
+        </a>
+    
+        <a href="https://ethresear.ch/t/erc721-extension-for-zk-snarks/13237" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">ERC721 Extension for zk-SNARKs</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Proposal for extending ERC721 with zero-knowledge proof capabilities</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Aug/2022</span>
+            </div>
+        </a>
+    
+        <a href="https://medium.com/@toni_w/privacy-preserving-proof-of-owernship-for-attendance-tokens-poa-using-zk-snarks-4fddabedfddb" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">Privacy-Preserving Proof of Ownership for Attendance Tokens</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Implementation of privacy-preserving proof of ownership using zk-SNARKs</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                <span class="work-date">Jul/2022</span>
+            </div>
+        </a>
+    
+        <a href="https://github.com/nerolation/pyxatu" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL">
+            <div class="work-header">
+                <h3 class="work-title">PyXatu</h3>
+                <span class="work-label label-DL">DL</span>
+            </div>
+            <p class="work-description">Open source Python library for Ethereum beacon chain data analysis</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/nerolation.png?size=40" alt="Toni Wahrstätter" class="author-avatar">
+                    <span>Toni Wahrstätter</span>
+                </div>
+                
+            </div>
+        </a>
+    
+        <a href="https://github.com/ethereum/execution-spec-tests/tree/main/tests/benchmark" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+            <div class="work-header">
+                <h3 class="work-title">EL Benchmarks</h3>
+                <span class="work-label label-EL">EL</span>
+            </div>
+            <p class="work-description">Writing EVM tests for worst-case bottleneck situations, which currently limit the maximum enforcable block gas limit</p>
+            <div class="work-footer">
+                <div class="work-author">
+                    <img src="https://github.com/jochem-brouwer.png?size=40" alt="Jochem Brouwer" class="author-avatar">
+                    <span>Jochem Brouwer</span>
+                </div>
+                
+            </div>
+        </a>
+    
+            <div class="show-more-container">
+                <button class="show-more-btn" id="show-more-btn">
+                    Show 52 more
+                </button>
+            </div>
+        
+                </div>
+            </section>
+
+
+            <!-- Team Section -->
+            <section class="section" id="team">
+                <h2 class="section-title">Team</h2>
+                <div class="team-members-grid">
+                    
+        <div class="team-member">
+            <img src="https://github.com/nerolation.png?size=100" alt="Toni Wahrstätter" class="team-member-avatar">
+            <div class="team-member-info">
+                <h4 class="team-member-name">Toni Wahrstätter</h4>
+                <div class="team-member-links">
+                    <a href="https://github.com/nerolation" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/nero_eth" target="_blank" rel="noopener noreferrer" class="team-member-link" title="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="team-member">
+            <img src="https://github.com/carlbeek.png?size=100" alt="Carl Beekhuizen" class="team-member-avatar">
+            <div class="team-member-info">
+                <h4 class="team-member-name">Carl Beekhuizen</h4>
+                <div class="team-member-links">
+                    <a href="https://github.com/carlbeek" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/carlbeek" target="_blank" rel="noopener noreferrer" class="team-member-link" title="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="team-member">
+            <img src="https://github.com/jochem-brouwer.png?size=100" alt="Jochem Brouwer" class="team-member-avatar">
+            <div class="team-member-info">
+                <h4 class="team-member-name">Jochem Brouwer</h4>
+                <div class="team-member-links">
+                    <a href="https://github.com/jochem-brouwer" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/JochemBrouwer96" target="_blank" rel="noopener noreferrer" class="team-member-link" title="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="team-member">
+            <img src="https://github.com/morph-dev.png?size=100" alt="Milos Stankovic" class="team-member-avatar">
+            <div class="team-member-info">
+                <h4 class="team-member-name">Milos Stankovic</h4>
+                <div class="team-member-links">
+                    <a href="https://github.com/morph-dev" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/MorphNetrunner" target="_blank" rel="noopener noreferrer" class="team-member-link" title="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="team-member">
+            <img src="https://github.com/raxhvl.png?size=100" alt="raxhvl" class="team-member-avatar">
+            <div class="team-member-info">
+                <h4 class="team-member-name">raxhvl</h4>
+                <div class="team-member-links">
+                    <a href="https://github.com/raxhvl" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/raxhvl" target="_blank" rel="noopener noreferrer" class="team-member-link" title="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="team-member">
+            <img src="https://github.com/jihoonsong.png?size=100" alt="Jihoon Song" class="team-member-avatar">
+            <div class="team-member-info">
+                <h4 class="team-member-name">Jihoon Song</h4>
+                <div class="team-member-links">
+                    <a href="https://github.com/jihoonsong" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/jih2nn" target="_blank" rel="noopener noreferrer" class="team-member-link" title="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="team-member">
+            <img src="https://github.com/bharath-123.png?size=100" alt="Bharath Vedartham" class="team-member-avatar">
+            <div class="team-member-info">
+                <h4 class="team-member-name">Bharath Vedartham</h4>
+                <div class="team-member-links">
+                    <a href="https://github.com/bharath-123" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/BharathVedarth1" target="_blank" rel="noopener noreferrer" class="team-member-link" title="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+                </div>
+                <div class="team-description">
+                    <h3>Join the Protocol Prototyping Team</h3>
+                    <p>Are you interested in joining Protocol Prototyping? We're always looking for talented engineers and researchers passionate about building the future of Ethereum. Even when we're not actively hiring, we'd love to hear from exceptional candidates.</p>
+                    <p>Get in touch: <a href="mailto:prototyping@ethereum.org" class="email-link">prototyping@ethereum.org</a></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2024 Ethereum Foundation</p>
+                <p>Last updated: <span id="last-updated">October 20, 2025</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
