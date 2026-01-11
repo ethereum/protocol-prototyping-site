@@ -44,7 +44,7 @@
         <div class="container">
             <!-- Hero Section -->
             <section class="hero" id="hero">
-                <div class="hero-content">
+                <div class="hero-content animate-on-scroll">
                     <p class="hero-description">
                         The <span class="highlight-text">Protocol Prototyping</span> team at the Ethereum Foundation builds end-to-end implementations of new ideas for Ethereum's core protocol. By turning concepts into working prototypes, we explore how potential upgrades behave in practice, helping the community move beyond theory and speculation.
                     </p>
@@ -53,14 +53,61 @@
 
             <!-- Projects Section -->
             <section class="section" id="projects">
-                <h2 class="section-title">Projects</h2>
-                <div class="filters">
+                <h2 class="section-title animate-on-scroll">Projects</h2>
+
+                <!-- Search and Controls -->
+                <div class="projects-controls animate-on-scroll">
+                    <div class="search-container">
+                        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="M21 21l-4.35-4.35"></path>
+                        </svg>
+                        <input type="text" id="project-search" class="search-input" placeholder="Search projects...">
+                        <button class="search-clear" id="search-clear" aria-label="Clear search">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 6L6 18M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="controls-row">
+                        <div class="filter-container">
+                            <label class="filter-label">Author</label>
+                            <select id="author-select" class="author-select">
+                                <option value="all">All members</option>
+                                <!-- Team member options will be dynamically inserted here -->
+                            </select>
+                        </div>
+
+                        <div class="sort-container">
+                            <label class="sort-label">Sort by</label>
+                            <select id="sort-select" class="sort-select">
+                                <option value="date-desc">Newest first</option>
+                                <option value="date-asc">Oldest first</option>
+                                <option value="alpha-asc">A - Z</option>
+                                <option value="alpha-desc">Z - A</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filters animate-on-scroll">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="CL">Consensus Layer</button>
                     <button class="filter-btn" data-filter="EL">Execution Layer</button>
                     <button class="filter-btn" data-filter="MEV-Boost">MEV-Boost</button>
                     <button class="filter-btn" data-filter="DL">Data Layer</button>
                 </div>
+
+                <!-- No results message -->
+                <div class="no-results" id="no-results">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="M21 21l-4.35-4.35"></path>
+                    </svg>
+                    <p>No projects found matching your search.</p>
+                </div>
+
                 <div class="team-work" id="team-work">
                     <!-- Work items will be dynamically inserted here -->
                 </div>
@@ -69,11 +116,11 @@
 
             <!-- Team Section -->
             <section class="section" id="team">
-                <h2 class="section-title">Team</h2>
-                <div class="team-members-grid">
+                <h2 class="section-title animate-on-scroll">Team</h2>
+                <div class="team-members-grid" id="team-members-grid">
                     <!-- Team members will be dynamically inserted here -->
                 </div>
-                <div class="team-description">
+                <div class="team-description animate-on-scroll">
                     <h3>Join the Protocol Prototyping Team</h3>
                     <p>Are you interested in joining Protocol Prototyping? We're always looking for talented engineers and researchers passionate about building the future of Ethereum. Even when we're not actively hiring, we'd love to hear from exceptional candidates.</p>
                     <p>Get in touch: <a href="mailto:prototyping@ethereum.org" class="email-link">prototyping@ethereum.org</a></p>
