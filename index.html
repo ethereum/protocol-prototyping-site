@@ -44,7 +44,7 @@
         <div class="container">
             <!-- Hero Section -->
             <section class="hero" id="hero">
-                <div class="hero-content">
+                <div class="hero-content animate-on-scroll">
                     <p class="hero-description">
                         The <span class="highlight-text">Protocol Prototyping</span> team at the Ethereum Foundation builds end-to-end implementations of new ideas for Ethereum's core protocol. By turning concepts into working prototypes, we explore how potential upgrades behave in practice, helping the community move beyond theory and speculation.
                     </p>
@@ -53,17 +53,64 @@
 
             <!-- Projects Section -->
             <section class="section" id="projects">
-                <h2 class="section-title">Projects</h2>
-                <div class="filters">
+                <h2 class="section-title animate-on-scroll">Projects</h2>
+
+                <!-- Search and Controls -->
+                <div class="projects-controls animate-on-scroll">
+                    <div class="search-container">
+                        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="M21 21l-4.35-4.35"></path>
+                        </svg>
+                        <input type="text" id="project-search" class="search-input" placeholder="Search projects...">
+                        <button class="search-clear" id="search-clear" aria-label="Clear search">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 6L6 18M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="controls-row">
+                        <div class="filter-container">
+                            <label class="filter-label">Author</label>
+                            <select id="author-select" class="author-select">
+                                <option value="all">All members</option>
+                                <option value="nerolation">Toni Wahrstätter</option><option value="carlbeek">Carl Beekhuizen</option><option value="jochem-brouwer">Jochem Brouwer</option><option value="morph-dev">Milos Stankovic</option><option value="raxhvl">raxhvl</option><option value="jihoonsong">Jihoon Song</option><option value="bharath-123">Bharath Vedartham</option>
+                            </select>
+                        </div>
+
+                        <div class="sort-container">
+                            <label class="sort-label">Sort by</label>
+                            <select id="sort-select" class="sort-select">
+                                <option value="date-desc">Newest first</option>
+                                <option value="date-asc">Oldest first</option>
+                                <option value="alpha-asc">A - Z</option>
+                                <option value="alpha-desc">Z - A</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filters animate-on-scroll">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="CL">Consensus Layer</button>
                     <button class="filter-btn" data-filter="EL">Execution Layer</button>
                     <button class="filter-btn" data-filter="MEV-Boost">MEV-Boost</button>
                     <button class="filter-btn" data-filter="DL">Data Layer</button>
                 </div>
+
+                <!-- No results message -->
+                <div class="no-results" id="no-results">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="M21 21l-4.35-4.35"></path>
+                    </svg>
+                    <p>No projects found matching your search.</p>
+                </div>
+
                 <div class="team-work" id="team-work">
                     
-        <a href="https://ethresear.ch/t/modeling-the-worst-case-parallel-execution-under-eip-7928/23418" target="_blank" rel="noopener noreferrer" class="work-item " data-label="EL">
+        <a href="https://ethresear.ch/t/modeling-the-worst-case-parallel-execution-under-eip-7928/23418" target="_blank" rel="noopener noreferrer" class="work-item " data-label="EL" data-date="2025-11-10" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Modeling the Worst-Case Parallel Execution under EIP-7928</h3>
                 <span class="work-label label-EL">EL</span>
@@ -78,7 +125,7 @@
             </div>
         </a>
     
-        <a href="https://blog.ethereum.org/2025/10/21/fusaka-gascap-update" target="_blank" rel="noopener noreferrer" class="work-item " data-label="EL">
+        <a href="https://blog.ethereum.org/2025/10/21/fusaka-gascap-update" target="_blank" rel="noopener noreferrer" class="work-item " data-label="EL" data-date="2025-10-21" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Fusaka Update – Transaction Gas Limit Cap arrives with EIP-7825</h3>
                 <span class="work-label label-EL">EL</span>
@@ -93,7 +140,7 @@
             </div>
         </a>
     
-        <a href="https://github.com/raxhvl/pitstop" target="_blank" rel="noopener noreferrer" class="work-item " data-label="EL">
+        <a href="https://github.com/raxhvl/pitstop" target="_blank" rel="noopener noreferrer" class="work-item " data-label="EL" data-date="2025-10-21" data-author="raxhvl">
             <div class="work-header">
                 <h3 class="work-title">Pitsop</h3>
                 <span class="work-label label-EL">EL</span>
@@ -108,7 +155,7 @@
             </div>
         </a>
     
-        <a href="https://github.com/ethereum/execution-spec-tests/releases/tag/bal%40v1.0.0" target="_blank" rel="noopener noreferrer" class="work-item " data-label="EL">
+        <a href="https://github.com/ethereum/execution-spec-tests/releases/tag/bal%40v1.0.0" target="_blank" rel="noopener noreferrer" class="work-item " data-label="EL" data-date="2025-09-30" data-author="raxhvl">
             <div class="work-header">
                 <h3 class="work-title">🧪 Testing Block Level Access Lists</h3>
                 <span class="work-label label-EL">EL</span>
@@ -123,7 +170,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/toward-semantic-block-chunking/23129" target="_blank" rel="noopener noreferrer" class="work-item " data-label="CL">
+        <a href="https://ethresear.ch/t/toward-semantic-block-chunking/23129" target="_blank" rel="noopener noreferrer" class="work-item " data-label="CL" data-date="2025-09-29" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Toward Semantic Block Chunking</h3>
                 <span class="work-label label-CL">CL</span>
@@ -138,7 +185,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/payload-chunking/23008" target="_blank" rel="noopener noreferrer" class="work-item " data-label="CL">
+        <a href="https://ethresear.ch/t/payload-chunking/23008" target="_blank" rel="noopener noreferrer" class="work-item " data-label="CL" data-date="2025-09-02" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Payload Chunking</h3>
                 <span class="work-label label-CL">CL</span>
@@ -153,7 +200,7 @@
             </div>
         </a>
     
-        <a href="https://notes.ethereum.org/@miloss/Prototyping_EIP-7782" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://notes.ethereum.org/@miloss/Prototyping_EIP-7782" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2025-09-01" data-author="morph-dev">
             <div class="work-header">
                 <h3 class="work-title">EIP-7782 Prototyping</h3>
                 <span class="work-label label-EL">EL</span>
@@ -168,7 +215,7 @@
             </div>
         </a>
     
-        <a href="https://github.com/jihoonsong/prysm/tree/eip7782" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://github.com/jihoonsong/prysm/tree/eip7782" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2025-08-27" data-author="jihoonsong">
             <div class="work-header">
                 <h3 class="work-title">EIP-7782 Prysm Prototype</h3>
                 <span class="work-label label-CL">CL</span>
@@ -183,7 +230,7 @@
             </div>
         </a>
     
-        <a href="https://www.youtube.com/watch?v=GiQyu1xSipA" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://www.youtube.com/watch?v=GiQyu1xSipA" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2025-08-22" data-author="jihoonsong">
             <div class="work-header">
                 <h3 class="work-title">ePBS and FOCIL - EthStaker Community Call</h3>
                 <span class="work-label label-CL">CL</span>
@@ -198,7 +245,7 @@
             </div>
         </a>
     
-        <a href="https://hackmd.io/@jihoonsong/rJX-fxADxl" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://hackmd.io/@jihoonsong/rJX-fxADxl" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2025-08-07" data-author="jihoonsong">
             <div class="work-header">
                 <h3 class="work-title">How to Implement EIP-7805 in the CL</h3>
                 <span class="work-label label-CL">CL</span>
@@ -213,7 +260,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/overclocking-blocks-with-gas-refunds/22862" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://ethresear.ch/t/overclocking-blocks-with-gas-refunds/22862" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2025-08-03" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Overclocking Blocks with Gas Refunds</h3>
                 <span class="work-label label-EL">EL</span>
@@ -228,7 +275,7 @@
             </div>
         </a>
     
-        <a href="https://hackmd.io/@jihoonsong/BJpcaudvex" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://hackmd.io/@jihoonsong/BJpcaudvex" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2025-07-31" data-author="jihoonsong">
             <div class="work-header">
                 <h3 class="work-title">How to Implement EIP-7805 in the EL</h3>
                 <span class="work-label label-EL">EL</span>
@@ -243,7 +290,7 @@
             </div>
         </a>
     
-        <a href="https://github.com/ethereum/execution-specs/pull/1349" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://github.com/ethereum/execution-specs/pull/1349" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2025-07-26" data-author="jihoonsong">
             <div class="work-header">
                 <h3 class="work-title">EIP-7805 Execution Specification</h3>
                 <span class="work-label label-EL">EL</span>
@@ -258,7 +305,7 @@
             </div>
         </a>
     
-        <a href="https://github.com/ethereum/consensus-specs/tree/b9dfb4575c51bb94ad0077e7b209db5720c8bb78/specs/_features/eip7805" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://github.com/ethereum/consensus-specs/tree/b9dfb4575c51bb94ad0077e7b209db5720c8bb78/specs/_features/eip7805" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2025-07-17" data-author="jihoonsong">
             <div class="work-header">
                 <h3 class="work-title">EIP-7805 Consensus Specification</h3>
                 <span class="work-label label-CL">CL</span>
@@ -273,7 +320,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/capping-transaction-gas-data-impact-and-rationale/22738" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://ethresear.ch/t/capping-transaction-gas-data-impact-and-rationale/22738" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2025-07-14" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Capping Transaction Gas: Data, Impact, and Rationale</h3>
                 <span class="work-label label-EL">EL</span>
@@ -288,7 +335,7 @@
             </div>
         </a>
     
-        <a href="https://raxhvl.com/ethereum/diet-bal/" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://raxhvl.com/ethereum/diet-bal/" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2025-07-09" data-author="raxhvl">
             <div class="work-header">
                 <h3 class="work-title">Diet BAL</h3>
                 <span class="work-label label-EL">EL</span>
@@ -303,7 +350,7 @@
             </div>
         </a>
     
-        <a href="https://pokebal.raxhvl.com" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://pokebal.raxhvl.com" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2025-07-01" data-author="raxhvl">
             <div class="work-header">
                 <h3 class="work-title">PokéBAL</h3>
                 <span class="work-label label-EL">EL</span>
@@ -318,7 +365,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/slot-restructuring-design-considerations-and-trade-offs/22687" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://ethresear.ch/t/slot-restructuring-design-considerations-and-trade-offs/22687" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2025-06-30" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Slot Restructuring: Design Considerations and Trade-Offs</h3>
                 <span class="work-label label-CL">CL</span>
@@ -333,7 +380,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/using-portal-network-protocol-for-history-expiry/22658" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://ethresear.ch/t/using-portal-network-protocol-for-history-expiry/22658" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2025-06-22" data-author="morph-dev">
             <div class="work-header">
                 <h3 class="work-title">Portal Network &amp; History Expiry</h3>
                 <span class="work-label label-EL">EL</span>
@@ -348,7 +395,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/block-level-access-lists-bals/22331" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://ethresear.ch/t/block-level-access-lists-bals/22331" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2025-05-13" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Block-level Access Lists (BALs)</h3>
                 <span class="work-label label-EL">EL</span>
@@ -363,7 +410,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/delayed-execution-and-free-da/22265" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://ethresear.ch/t/delayed-execution-and-free-da/22265" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2025-05-05" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Delayed Execution and Free DA</h3>
                 <span class="work-label label-EL">EL</span>
@@ -378,7 +425,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/execution-dependencies/22150" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://ethresear.ch/t/execution-dependencies/22150" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2025-04-14" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Execution Dependencies</h3>
                 <span class="work-label label-EL">EL</span>
@@ -393,7 +440,7 @@
             </div>
         </a>
     
-        <a href="https://github.com/jihoonsong/local-devnet-focil" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://github.com/jihoonsong/local-devnet-focil" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2025-04-05" data-author="jihoonsong">
             <div class="work-header">
                 <h3 class="work-title">EIP-7805 Kurtosis Configurations</h3>
                 <span class="work-label label-CL">CL</span>
@@ -408,7 +455,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/expanding-mempool-perspectives/22022" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL">
+        <a href="https://ethresear.ch/t/expanding-mempool-perspectives/22022" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL" data-date="2025-03-27" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Expanding Mempool Perspectives</h3>
                 <span class="work-label label-DL">DL</span>
@@ -423,7 +470,7 @@
             </div>
         </a>
     
-        <a href="https://github.com/ethereum/go-ethereum/pull/30914" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://github.com/ethereum/go-ethereum/pull/30914" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2025-02-25" data-author="jihoonsong">
             <div class="work-header">
                 <h3 class="work-title">EIP-7805 Geth Prototype</h3>
                 <span class="work-label label-EL">EL</span>
@@ -438,7 +485,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/max-blobs-flag-economic-perspective/21798" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL">
+        <a href="https://ethresear.ch/t/max-blobs-flag-economic-perspective/21798" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL" data-date="2025-02-20" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Max-Blobs Flag: Economic Perspective</h3>
                 <span class="work-label label-DL">DL</span>
@@ -453,7 +500,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/delayed-execution-and-skipped-transactions/21677" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://ethresear.ch/t/delayed-execution-and-skipped-transactions/21677" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2025-02-05" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Delayed Execution And Skipped Transactions</h3>
                 <span class="work-label label-EL">EL</span>
@@ -468,7 +515,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/block-level-warming/21452" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://ethresear.ch/t/block-level-warming/21452" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2025-01-16" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Block-Level Warming</h3>
                 <span class="work-label label-EL">EL</span>
@@ -483,7 +530,7 @@
             </div>
         </a>
     
-        <a href="https://github.com/ethereum/execution-apis/pull/609" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://github.com/ethereum/execution-apis/pull/609" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2024-12-24" data-author="jihoonsong">
             <div class="work-header">
                 <h3 class="work-title">EIP-7805 Execution APIs Specification</h3>
                 <span class="work-label label-EL">EL</span>
@@ -498,7 +545,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/on-increasing-the-block-gas-limit-technical-considerations-path-forward/21225" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://ethresear.ch/t/on-increasing-the-block-gas-limit-technical-considerations-path-forward/21225" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2024-12-09" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">On Increasing the Block Gas Limit: Technical Considerations &amp; Path Forward</h3>
                 <span class="work-label label-EL">EL</span>
@@ -513,7 +560,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/on-blob-markets-base-fee-adjustments-and-optimizations/21024" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL">
+        <a href="https://ethresear.ch/t/on-blob-markets-base-fee-adjustments-and-optimizations/21024" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL" data-date="2024-11-18" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">On Blob Markets, Base Fee Adjustments and Optimizations</h3>
                 <span class="work-label label-DL">DL</span>
@@ -528,7 +575,7 @@
             </div>
         </a>
     
-        <a href="https://eips.ethereum.org/EIPS/eip-7805" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://eips.ethereum.org/EIPS/eip-7805" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2024-11-01" data-author="jihoonsong">
             <div class="work-header">
                 <h3 class="work-title">EIP-7805: Fork-choice enforced Inclusion Lists (FOCIL)</h3>
                 <span class="work-label label-CL">CL</span>
@@ -543,7 +590,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/on-solo-staking-local-block-building-and-blobs/20540" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://ethresear.ch/t/on-solo-staking-local-block-building-and-blobs/20540" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2024-10-02" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">On solo staking, local block building and blobs</h3>
                 <span class="work-label label-CL">CL</span>
@@ -558,7 +605,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/steelmanning-a-blob-throughput-increase-for-pectra/20499" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL">
+        <a href="https://ethresear.ch/t/steelmanning-a-blob-throughput-increase-for-pectra/20499" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL" data-date="2024-09-26" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Steelmanning a blob throughput increase for Pectra</h3>
                 <span class="work-label label-DL">DL</span>
@@ -573,7 +620,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/on-proposer-timing-games-and-economies-of-scale/20309" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://ethresear.ch/t/on-proposer-timing-games-and-economies-of-scale/20309" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2024-08-20" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">On Proposer Timing Games and Economies of Scale</h3>
                 <span class="work-label label-CL">CL</span>
@@ -588,7 +635,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/on-attestations-block-propagation-and-timing-games/20272" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://ethresear.ch/t/on-attestations-block-propagation-and-timing-games/20272" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2024-08-14" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">On Attestations, Block Propagation, and Timing Games</h3>
                 <span class="work-label label-CL">CL</span>
@@ -603,7 +650,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/diseconomies-of-scale-anti-correlation-penalties-eip-7716/20114" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://ethresear.ch/t/diseconomies-of-scale-anti-correlation-penalties-eip-7716/20114" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2024-07-24" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Diseconomies of Scale: Anti-Correlation Penalties (EIP-7716)</h3>
                 <span class="work-label label-CL">CL</span>
@@ -618,7 +665,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/deep-diving-attestations-a-quantitative-analysis/20020" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://ethresear.ch/t/deep-diving-attestations-a-quantitative-analysis/20020" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2024-06-26" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Deep Diving Attestations - A Quantitative Analysis</h3>
                 <span class="work-label label-CL">CL</span>
@@ -633,7 +680,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/blobs-reorgs-and-the-role-of-mev-boost/19783" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL">
+        <a href="https://ethresear.ch/t/blobs-reorgs-and-the-role-of-mev-boost/19783" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL" data-date="2024-06-26" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Blobs, Reorgs, and the Role of MEV-Boost</h3>
                 <span class="work-label label-DL">DL</span>
@@ -648,7 +695,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/is-it-worth-using-mev-boost/19753" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://ethresear.ch/t/is-it-worth-using-mev-boost/19753" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2024-06-06" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Is it worth using MEV-Boost?</h3>
                 <span class="work-label label-CL">CL</span>
@@ -663,7 +710,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/big-blocks-blobs-and-reorgs/19674" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL">
+        <a href="https://ethresear.ch/t/big-blocks-blobs-and-reorgs/19674" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL" data-date="2024-05-29" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Big blocks, blobs, and reorgs</h3>
                 <span class="work-label label-DL">DL</span>
@@ -678,7 +725,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/slashing-proofoor-on-chain-slashed-validator-proofs/19421" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://ethresear.ch/t/slashing-proofoor-on-chain-slashed-validator-proofs/19421" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2024-04-30" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Slashing Proofoor - On-chain slashed validator proofs</h3>
                 <span class="work-label label-CL">CL</span>
@@ -693,7 +740,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/portal-network-verkle/19339" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://ethresear.ch/t/portal-network-verkle/19339" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2024-04-19" data-author="morph-dev">
             <div class="work-header">
                 <h3 class="work-title">Portal Network &amp; Verkle</h3>
                 <span class="work-label label-EL">EL</span>
@@ -708,7 +755,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/analysis-on-correlated-attestation-penalties/19244" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://ethresear.ch/t/analysis-on-correlated-attestation-penalties/19244" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2024-04-09" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Analysis on Correlated Attestation Penalties</h3>
                 <span class="work-label label-CL">CL</span>
@@ -723,7 +770,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/eip-7623-post-4844-analysis/19199" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://ethresear.ch/t/eip-7623-post-4844-analysis/19199" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2024-04-03" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">EIP-7623 - Post-4844 Analysis</h3>
                 <span class="work-label label-EL">EL</span>
@@ -738,7 +785,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/analyzing-eip-7623-increase-calldata-cost/19002" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://ethresear.ch/t/analyzing-eip-7623-increase-calldata-cost/19002" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2024-03-14" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Analyzing EIP-7623: Increase Calldata Cost</h3>
                 <span class="work-label label-EL">EL</span>
@@ -753,7 +800,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/on-increasing-the-block-gas-limit/18567" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://ethresear.ch/t/on-increasing-the-block-gas-limit/18567" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2024-02-05" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">On Increasing the Block Gas Limit</h3>
                 <span class="work-label label-EL">EL</span>
@@ -768,7 +815,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/on-block-sizes-gas-limits-and-scalability/184443" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://ethresear.ch/t/on-block-sizes-gas-limits-and-scalability/184443" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2024-01-24" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">On Block Sizes, Gas Limits and Scalability</h3>
                 <span class="work-label label-EL">EL</span>
@@ -783,7 +830,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/distributing-ethereum-state-over-portal-network/17882" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://ethresear.ch/t/distributing-ethereum-state-over-portal-network/17882" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2023-12-17" data-author="morph-dev">
             <div class="work-header">
                 <h3 class="work-title">Distributing Ethereum State over Portal Network</h3>
                 <span class="work-label label-EL">EL</span>
@@ -798,7 +845,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/in-a-post-mev-burn-world-some-simulations-and-stats/17092" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://ethresear.ch/t/in-a-post-mev-burn-world-some-simulations-and-stats/17092" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2023-10-16" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">In a post MEV-Burn world - Some simulations and stats</h3>
                 <span class="work-label label-CL">CL</span>
@@ -813,7 +860,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/cumulative-non-expiring-inclusion-lists/16520" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://ethresear.ch/t/cumulative-non-expiring-inclusion-lists/16520" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2023-08-31" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Cumulative, Non-Expiring Inclusion Lists</h3>
                 <span class="work-label label-CL">CL</span>
@@ -828,7 +875,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/the-second-slot-itch-statistical-analysis-of-reorgs/16333" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://ethresear.ch/t/the-second-slot-itch-statistical-analysis-of-reorgs/16333" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2023-08-10" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">The Second-Slot Itch - Statistical Analysis of Reorgs</h3>
                 <span class="work-label label-CL">CL</span>
@@ -843,7 +890,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/selfish-mixing-and-randao-manipulation/16081" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://ethresear.ch/t/selfish-mixing-and-randao-manipulation/16081" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2023-07-10" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Selfish Mixing and RANDAO Manipulation</h3>
                 <span class="work-label label-CL">CL</span>
@@ -858,7 +905,7 @@
             </div>
         </a>
     
-        <a href="https://hackmd.io/@Nerolation/rkp8LyRUh" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://hackmd.io/@Nerolation/rkp8LyRUh" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2023-06-11" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Gas Ticketing - A Backstage Pass to Ethereum Blocks</h3>
                 <span class="work-label label-EL">EL</span>
@@ -873,7 +920,7 @@
             </div>
         </a>
     
-        <a href="./builder-censorship.html" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="./builder-censorship.html" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2023-01-30" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Builders on MEV - Analysing the impact of the OFAC sanctions</h3>
                 <span class="work-label label-CL">CL</span>
@@ -888,7 +935,7 @@
             </div>
         </a>
     
-        <a href="https://medium.com/@toni_w/practical-guide-into-analyzing-mev-in-the-proof-of-stake-era-e2b024509918" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL">
+        <a href="https://medium.com/@toni_w/practical-guide-into-analyzing-mev-in-the-proof-of-stake-era-e2b024509918" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="CL" data-date="2022-10-18" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Practical Guide into Analyzing MEV in the Proof-of-Stake Era</h3>
                 <span class="work-label label-CL">CL</span>
@@ -903,7 +950,7 @@
             </div>
         </a>
     
-        <a href="./eip5564.html" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="./eip5564.html" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2022-09-03" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">ERC-5564: Improving Privacy on Ethereum through Stealth Address Wallets</h3>
                 <span class="work-label label-EL">EL</span>
@@ -918,7 +965,7 @@
             </div>
         </a>
     
-        <a href="https://medium.com/@toni_w/ethereum-datafarm-parsing-historic-event-data-from-the-ethereum-blockchain-into-csv-files-using-9c7ec79dfe7c" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL">
+        <a href="https://medium.com/@toni_w/ethereum-datafarm-parsing-historic-event-data-from-the-ethereum-blockchain-into-csv-files-using-9c7ec79dfe7c" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL" data-date="2022-08-29" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Ethereum Datafarm: Parsing Historic Event Data</h3>
                 <span class="work-label label-DL">DL</span>
@@ -933,7 +980,7 @@
             </div>
         </a>
     
-        <a href="https://ethresear.ch/t/erc721-extension-for-zk-snarks/13237" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://ethresear.ch/t/erc721-extension-for-zk-snarks/13237" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2022-08-04" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">ERC721 Extension for zk-SNARKs</h3>
                 <span class="work-label label-EL">EL</span>
@@ -948,7 +995,7 @@
             </div>
         </a>
     
-        <a href="https://medium.com/@toni_w/privacy-preserving-proof-of-owernship-for-attendance-tokens-poa-using-zk-snarks-4fddabedfddb" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://medium.com/@toni_w/privacy-preserving-proof-of-owernship-for-attendance-tokens-poa-using-zk-snarks-4fddabedfddb" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="2022-07-24" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">Privacy-Preserving Proof of Ownership for Attendance Tokens</h3>
                 <span class="work-label label-EL">EL</span>
@@ -963,7 +1010,7 @@
             </div>
         </a>
     
-        <a href="https://github.com/nerolation/pyxatu" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL">
+        <a href="https://github.com/nerolation/pyxatu" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="DL" data-date="" data-author="nerolation">
             <div class="work-header">
                 <h3 class="work-title">PyXatu</h3>
                 <span class="work-label label-DL">DL</span>
@@ -978,7 +1025,7 @@
             </div>
         </a>
     
-        <a href="https://github.com/ethereum/execution-spec-tests/tree/main/tests/benchmark" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL">
+        <a href="https://github.com/ethereum/execution-spec-tests/tree/main/tests/benchmark" target="_blank" rel="noopener noreferrer" class="work-item work-item-hidden" data-label="EL" data-date="" data-author="jochem-brouwer">
             <div class="work-header">
                 <h3 class="work-title">EL Benchmarks</h3>
                 <span class="work-label label-EL">EL</span>
@@ -1005,144 +1052,144 @@
 
             <!-- Team Section -->
             <section class="section" id="team">
-                <h2 class="section-title">Team</h2>
-                <div class="team-members-grid">
+                <h2 class="section-title animate-on-scroll">Team</h2>
+                <div class="team-members-grid" id="team-members-grid">
                     
         <div class="team-member">
-            <img src="https://github.com/nerolation.png?size=100" alt="Toni Wahrstätter" class="team-member-avatar">
-            <div class="team-member-info">
-                <h4 class="team-member-name">Toni Wahrstätter</h4>
-                <div class="team-member-links">
-                    <a href="https://github.com/nerolation" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                    <a href="https://twitter.com/nero_eth" target="_blank" rel="noopener noreferrer" class="team-member-link" title="Twitter">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                        </svg>
-                    </a>
-                </div>
+            <div class="team-member-avatar-container">
+                <img src="https://github.com/nerolation.png?size=100" alt="Toni Wahrstätter" class="team-member-avatar">
+            </div>
+            <h4 class="team-member-name">Toni Wahrstätter</h4>
+            <div class="team-member-links">
+                <a href="https://github.com/nerolation" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/nero_eth" target="_blank" rel="noopener noreferrer" class="team-member-link" title="X (Twitter)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
             </div>
         </div>
     
         <div class="team-member">
-            <img src="https://github.com/carlbeek.png?size=100" alt="Carl Beekhuizen" class="team-member-avatar">
-            <div class="team-member-info">
-                <h4 class="team-member-name">Carl Beekhuizen</h4>
-                <div class="team-member-links">
-                    <a href="https://github.com/carlbeek" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                    <a href="https://twitter.com/carlbeek" target="_blank" rel="noopener noreferrer" class="team-member-link" title="Twitter">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                        </svg>
-                    </a>
-                </div>
+            <div class="team-member-avatar-container">
+                <img src="https://github.com/carlbeek.png?size=100" alt="Carl Beekhuizen" class="team-member-avatar">
+            </div>
+            <h4 class="team-member-name">Carl Beekhuizen</h4>
+            <div class="team-member-links">
+                <a href="https://github.com/carlbeek" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/carlbeek" target="_blank" rel="noopener noreferrer" class="team-member-link" title="X (Twitter)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
             </div>
         </div>
     
         <div class="team-member">
-            <img src="https://github.com/jochem-brouwer.png?size=100" alt="Jochem Brouwer" class="team-member-avatar">
-            <div class="team-member-info">
-                <h4 class="team-member-name">Jochem Brouwer</h4>
-                <div class="team-member-links">
-                    <a href="https://github.com/jochem-brouwer" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                    <a href="https://twitter.com/JochemBrouwer96" target="_blank" rel="noopener noreferrer" class="team-member-link" title="Twitter">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                        </svg>
-                    </a>
-                </div>
+            <div class="team-member-avatar-container">
+                <img src="https://github.com/jochem-brouwer.png?size=100" alt="Jochem Brouwer" class="team-member-avatar">
+            </div>
+            <h4 class="team-member-name">Jochem Brouwer</h4>
+            <div class="team-member-links">
+                <a href="https://github.com/jochem-brouwer" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/JochemBrouwer96" target="_blank" rel="noopener noreferrer" class="team-member-link" title="X (Twitter)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
             </div>
         </div>
     
         <div class="team-member">
-            <img src="https://github.com/morph-dev.png?size=100" alt="Milos Stankovic" class="team-member-avatar">
-            <div class="team-member-info">
-                <h4 class="team-member-name">Milos Stankovic</h4>
-                <div class="team-member-links">
-                    <a href="https://github.com/morph-dev" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                    <a href="https://twitter.com/MorphNetrunner" target="_blank" rel="noopener noreferrer" class="team-member-link" title="Twitter">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                        </svg>
-                    </a>
-                </div>
+            <div class="team-member-avatar-container">
+                <img src="https://github.com/morph-dev.png?size=100" alt="Milos Stankovic" class="team-member-avatar">
+            </div>
+            <h4 class="team-member-name">Milos Stankovic</h4>
+            <div class="team-member-links">
+                <a href="https://github.com/morph-dev" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/MorphNetrunner" target="_blank" rel="noopener noreferrer" class="team-member-link" title="X (Twitter)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
             </div>
         </div>
     
         <div class="team-member">
-            <img src="https://github.com/raxhvl.png?size=100" alt="raxhvl" class="team-member-avatar">
-            <div class="team-member-info">
-                <h4 class="team-member-name">raxhvl</h4>
-                <div class="team-member-links">
-                    <a href="https://github.com/raxhvl" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                    <a href="https://twitter.com/raxhvl" target="_blank" rel="noopener noreferrer" class="team-member-link" title="Twitter">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                        </svg>
-                    </a>
-                </div>
+            <div class="team-member-avatar-container">
+                <img src="https://github.com/raxhvl.png?size=100" alt="raxhvl" class="team-member-avatar">
+            </div>
+            <h4 class="team-member-name">raxhvl</h4>
+            <div class="team-member-links">
+                <a href="https://github.com/raxhvl" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/raxhvl" target="_blank" rel="noopener noreferrer" class="team-member-link" title="X (Twitter)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
             </div>
         </div>
     
         <div class="team-member">
-            <img src="https://github.com/jihoonsong.png?size=100" alt="Jihoon Song" class="team-member-avatar">
-            <div class="team-member-info">
-                <h4 class="team-member-name">Jihoon Song</h4>
-                <div class="team-member-links">
-                    <a href="https://github.com/jihoonsong" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                    <a href="https://twitter.com/jih2nn" target="_blank" rel="noopener noreferrer" class="team-member-link" title="Twitter">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                        </svg>
-                    </a>
-                </div>
+            <div class="team-member-avatar-container">
+                <img src="https://github.com/jihoonsong.png?size=100" alt="Jihoon Song" class="team-member-avatar">
+            </div>
+            <h4 class="team-member-name">Jihoon Song</h4>
+            <div class="team-member-links">
+                <a href="https://github.com/jihoonsong" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/jih2nn" target="_blank" rel="noopener noreferrer" class="team-member-link" title="X (Twitter)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
             </div>
         </div>
     
         <div class="team-member">
-            <img src="https://github.com/bharath-123.png?size=100" alt="Bharath Vedartham" class="team-member-avatar">
-            <div class="team-member-info">
-                <h4 class="team-member-name">Bharath Vedartham</h4>
-                <div class="team-member-links">
-                    <a href="https://github.com/bharath-123" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                    <a href="https://twitter.com/BharathVedarth1" target="_blank" rel="noopener noreferrer" class="team-member-link" title="Twitter">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                        </svg>
-                    </a>
-                </div>
+            <div class="team-member-avatar-container">
+                <img src="https://github.com/bharath-123.png?size=100" alt="Bharath Vedartham" class="team-member-avatar">
+            </div>
+            <h4 class="team-member-name">Bharath Vedartham</h4>
+            <div class="team-member-links">
+                <a href="https://github.com/bharath-123" target="_blank" rel="noopener noreferrer" class="team-member-link" title="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/BharathVedarth1" target="_blank" rel="noopener noreferrer" class="team-member-link" title="X (Twitter)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
             </div>
         </div>
     
                 </div>
-                <div class="team-description">
+                <div class="team-description animate-on-scroll">
                     <h3>Join the Protocol Prototyping Team</h3>
                     <p>Are you interested in joining Protocol Prototyping? We're always looking for talented engineers and researchers passionate about building the future of Ethereum. Even when we're not actively hiring, we'd love to hear from exceptional candidates.</p>
                     <p>Get in touch: <a href="mailto:prototyping@ethereum.org" class="email-link">prototyping@ethereum.org</a></p>
